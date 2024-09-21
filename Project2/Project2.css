@@ -1,0 +1,229 @@
+body{
+    padding:20px 140px 20px 140px;
+    font-family: "Noto Sans", sans-serif;
+}
+.head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+    align-items:center;
+    margin-top:10px;
+}
+button{
+    background-color:white;
+    border-radius:5px;
+    border:1.5px solid black;
+    padding-left:20px;
+    padding-right:20px;
+}
+.grid{
+    display:grid;
+    gap:10px;
+    grid-template-columns: 1fr 0.5fr 0.3fr 0.8fr;
+    height: 500px;
+}
+.one{
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start:1;
+    grid-row-end:2;
+    z-index:1;
+    border-radius:10px;
+}
+.image{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:4; 
+    background-image: url('./images/stock2.jpg');
+    background-size:cover;
+    background-position:center;
+    border-radius:10px;
+}
+
+.flex{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:4;
+    grid-column-end:5;
+    display:flex;
+    flex-direction:column;
+    border-radius:10px;
+    justify-content:space-evenly;
+    width:fit-content;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:20px;
+}
+.sub-head{
+    font-size:55px;
+    font-weight:100px;
+}
+
+
+.bo2{
+    background-color: black;
+    color:white;
+    margin-top:30px;
+}
+.opinion{
+    display:flex;
+    margin-top:150px;
+    border-radius:10px;
+    padding:40px;
+    background-color: #405D72;
+    color:white;
+}
+.sub-head2{
+    font-size: 35px;
+}
+.second{
+    width:50%;
+    margin-left:10%;
+}
+.bottom_head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+    align-items:center;
+    margin-top:10px;
+}
+.logo{
+    display:inline-flex;
+    justify-content:space-between;
+    width:20%;
+}
+.logo a{
+    text-align:right;
+}
+.logo a img{
+    width:40%;
+}
+button:hover{
+    transition: transform 0.3s ease;
+    transform:scale(1.1);
+}
+.logo a img{
+    transition: transform 0.3s ease;
+    transform:scale(1.1);
+}
+.text{
+    font-size:125%;
+}
+@media (max-width:820px){
+    body{
+        padding:20px 30px 20px 30px;
+        font-family:"Noto Sans", sans-serif;
+    }
+    .grid{
+        display:grid;
+        gap:10px;
+        grid-template-columns: 1fr 0.5fr 0.3fr;
+        grid-template-rows:3fr 1fr;
+        height:800px;
+    }
+    .one{
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:2;
+        z-index:1;
+        border-radius:10px;
+    }
+    .image{
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start:2;
+        grid-column-end:4; 
+        background-image: url('images/stock2.jpg');
+        background-size:cover;
+        background-position:center;
+        border-radius:10px;
+    }
+    .flex{
+        grid-row-start:2;
+        grid-row-end:3;
+        grid-column-start:1;
+        grid-column-end:4;
+        display:flex;
+        flex-direction:row;
+        border-radius:10px;
+        justify-content:space-evenly;
+        width:100%;
+        font-size:20px;
+        margin-top:5%;
+        text-align:center;
+    } 
+    .opinion{
+        margin-top:0px;
+        flex-direction:column;
+        text-align:center;
+    }
+    .second{
+        width:auto;
+        margin-left:0px;
+    }
+    .content{
+        font-size:20px;
+    }
+    .name{
+        font-size:20px;
+    }
+    .logo a img{
+        width:40%;
+    }
+
+
+}
+@media (max-width:480px){
+    body{
+        padding:1px 10px 1px 10px;
+        font-family: "Noto Sans", sans-serif;
+    }
+    .grid{
+        display:flex;
+        flex-direction:column;
+        height:auto;
+        gap:20px;
+    }
+    .sub-head{
+        font-size:45px;
+        font-weight:100;
+    }
+    .text{
+        font-size:23px;
+    }
+    .bo2{
+        margin-top:10px;
+    }
+    .image{
+        width:auto;
+        height:200px;
+    }
+    .opinion{
+        margin-top:60px;
+        flex-direction:column;
+        padding:20px;
+        text-align:center;
+    }
+    .second{
+        width:auto;
+        margin-left:0px;
+    }
+    .bottom_head{
+        flex-direction:column;
+        gap:30px;
+    }
+    .logo{
+        width:35%;
+    }
+    .logo a{
+        text-align:center;
+    }
+    .logo a img{
+        width:50%;
+    }
+    .flex{
+        font-size:17px;
+    }
+}
