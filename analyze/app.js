@@ -12,7 +12,6 @@ const connectToDatabase = async () => {
         await client.connect();
         console.log(`Connected to the ${dbname} database`);
         stu=client.db(dbname).collection(student_collection);
-        // Add any additional operations with the database here, if needed
 
     } catch (err) {
         console.error(`Error connecting to the database: ${err}`);
@@ -53,8 +52,6 @@ const student=async()=>{
         } else {
             subdocId = existingSubdoc._id;
         }
-
-        // Increment the Number_of_times_played field
         await stu.updateOne(
             { _id: insertedId, "List_of_games._id": subdocId },
             { $inc: { "List_of_games.$.Number_of_times_played": 1 } }
@@ -94,59 +91,3 @@ const games=async()=>{
 }
 await student();
 await games();
-// let result=stu.find(given);
-        // let final=await result.toArray();
-        // let insertedId=none;
-        // console.log(`Found ${final.length} matching records`);
-        // if (final.length===0){
-        //     let doc=await stu.insertOne(given);
-        //     console.log("New data, added into the database:");
-        //     const insertedId = doc.insertedId;
-        //     console.log("Inserted document ID:",insertedId);
-        //     const games = { List_of_games: []};
-        //     let game_list = await stu.updateOne(
-        //         { _id: insertedId }, 
-        //         { $set: games }     
-        //     );
-        //     console.log("Updated the inserted document with games list");
-            
-        // }
-        // if (insertedId===none){
-        //     doc=final[0]
-        // }
-        // if (doc.find({ List_of_games: { $in: {game_name: "g1"} } }).toArray()===0){
-        //     let game_uodata=await stu.update
-        // }
-        // try{
-        //     await connectToDatabase()
-        //     console.log("Conected to database successfully");
-        //     const filter = { Student_name: given.Student_name, game_name: given.game_name };
-        //     let add=stu.updateOne(filter,{$set:given},{upsert:true});
-        //     console.log(add);
-        //     const insertedId = add.upsertedId ? add.upsertedId._id : (await stu.findOne(filter))._id; 
-        //     let result= await stu.find({List_of_games:{ $exists: true }}).toArray();
-        //     console.log(`Found ${result.length} matching records`);
-        //     if(result.length===0){
-        //         await stu.updateOne(
-        //             { _id: insertedId }, 
-        //             { $set: {List_of_games:[]} },   
-        //         );
-        //     }
-        //     let exi=await add.find({List_of_games:{Game_name: "g1"}}).toArray();
-        //     if (exi.length()===0){
-        //         id=new MongoClient.ObjectId()
-        //         const re=await stu.updateOne(
-        //             {_id:insertedId},
-        //             { $push:{List_of_games:{_id: id,Game_Name:"g1",Number_of_times_played:0}}}
-        //         );
-        //     }
-        //     else{
-        //         id=exi[0]._id;
-        //     }
-        //     await stu.updateOne(
-        //         {_id:new ObjectId(insertedId),"List_of_games._id":new ObjectId(id)},
-        //         {$set:{"List_of_games.$.Number_of_times_played":{$inc:1}}}
-        //     )
-        // }catch (err) {
-        //     console.error(`Error connecting to the database: ${err}`);
-        // }
