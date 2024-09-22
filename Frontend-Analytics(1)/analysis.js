@@ -39,13 +39,27 @@ overview.addEventListener("click",function(){
     right.innerHTML="";
     this.classList.add("active1");
     const pie=`<div class='pie'></div>`;  
-    const content= `<div class='content'><div class='con'><div class='happy'></div><div>Happy</div><div>40%</div></div>
-    <div class='con'><div class='angry'></div><div>Angry</div><div>15%</div></div>
-    <div class='con'><div class='fear'></div><div>Fear</div><div>10%</div></div>
-    <div class='con'><div class='sad'></div><div>Sad</div><div>5%</div></div>
-    <div class='con'><div class='disgust'></div><div>Disgust</div><div>10%</div></div>
-    <div class='con'><div class='neutral'></div><div>Neutral</div><div>15%</div></div>
-    <div class='con'><div class='surprised'></div><div>Surprised</div><div>5%</div></div></div>`
+    const content= `<div class='content'><div class='happy'></div><div style="grid-column:2/3;
+    grid-row:1/2;">Happy</div><div style="grid-column:3/4;
+    grid-row:1/2;">40%</div>
+    <div class='angry'></div><div style="grid-column:2/3;
+    grid-row:2/3;">Angry</div><div style="grid-column:3/4;
+    grid-row:2/3;">15%</div>
+    <div class='fear'></div><div style="grid-column:2/3;
+    grid-row:3/4;">Fear</div><div style="grid-column:3/4;
+    grid-row:3/4;">10%</div>
+    <div class='sad'></div><div style="grid-column:2/3;
+    grid-row:4/5;">Sad</div><div style="grid-column:3/4;
+    grid-row:4/5;">5%</div>
+    <div class='disgust'></div><div style="grid-column:2/3;
+    grid-row:5/6;">Disgust</div><div style="grid-column:3/4;
+    grid-row:5/6;">10%</div>
+    <div class='neutral'></div><div style="grid-column:2/3;
+    grid-row:6/7;">Neutral</div><div style="grid-column:3/4;
+    grid-row:6/7;">15%</div>
+    <div class='surprised'></div><div style="grid-column:2/3;
+    grid-row:7/8;">Surprised</div><div style="grid-column:3/4;
+    grid-row:7/8;">5%</div></div>`
     right.insertAdjacentHTML("beforeend",pie);
     right.insertAdjacentHTML("beforeend",content);
 });
